@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Career-Infotech';//title of the html page
 
+  variable="blue";//ngStyle variable for bg-color
+  variable2="white";//ngStyle variable for color
+  variable3="blue";//variable for ngStyle using condition
+  
   success_msg=true;// If variable
 
   day=7;//Switch case variable
+  months=15;
 
   contact=[//array object used in for loop
     {

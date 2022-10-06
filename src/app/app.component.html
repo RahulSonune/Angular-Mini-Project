@@ -1,4 +1,9 @@
-<h1 style="background-color: red;">{{title}}</h1>
+
+<h1 [ngStyle]="{'background-color' : 'aqua' }">{{title}}</h1>
+
+<h3 [ngStyle]="{'background-color': variable, 'color': variable2}">This is ngStyle Using Variable</h3>
+<h3 [ngStyle]="{'background-color': 'lime', 'color': variable3 === 'blue' ? 'blue' : 'gray'}">This is ngStyle using Ternary Opeator/Condition</h3>
+<h3>Working with ngIf</h3> 
 <div *ngIf="success_msg; then update_msg; else error_msg;">
     Logged in Successfully !
 </div>
@@ -9,6 +14,7 @@
     Update Data !
 </ng-template>
 
+<h3>Working with ngFor and ngIf</h3>
 <ul>
     <li *ngFor="let con of contact;index as i; first as f; last as l">
         <div *ngIf="f">This is First Record !</div>
@@ -38,6 +44,21 @@
     <div *ngSwitchDefault>Enter Number between 1-7</div>
 </div>
 
+<div [ngSwitch]="months"> 
+    <div *ngSwitchCase="1">This is January</div>
+    <div *ngSwitchCase="2">This is February</div>
+    <div *ngSwitchCase="3">This is March</div>
+    <div *ngSwitchCase="4">This is April</div>
+    <div *ngSwitchCase="5">This is May</div>
+    <div *ngSwitchCase="6">This is June</div>
+    <div *ngSwitchCase="7">This is July</div>
+    <div *ngSwitchCase="8">This is August</div>
+    <div *ngSwitchCase="9">This is September</div>
+    <div *ngSwitchCase="10">This is October</div>
+    <div *ngSwitchCase="11">This is November</div>
+    <div *ngSwitchCase="12">This is December</div>
+    <div *ngSwitchDefault>Enter Valid Number Between 1-12</div>
+</div>
 
 
 
