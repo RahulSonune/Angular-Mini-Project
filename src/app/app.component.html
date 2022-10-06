@@ -18,11 +18,27 @@
     </li>
     
 </ul>
-<p>This is new Table </p>
+<h3>Working with ngFor and ngIf</h3>
 <ul>
     <li *ngFor="let con of contact;index as i;even as e; odd as o">        
         <div *ngIf="e" style="background-color: darkgray;">{{con.firstname}}{{con.lastname}}{{con.contact}}</div>
         <div *ngIf="o" style="background-color: gray;">{{con.firstname}}{{con.lastname}}{{con.contact}}</div>
     </li>
 </ul>
+
+<h3>Working with ngSwitchCase</h3>
+<div [ngSwitch]="day">
+    <div *ngSwitchCase="1">Today is Sunday</div>
+    <div *ngSwitchCase="2">Today is Monday</div>
+    <div *ngSwitchCase="3">Today is Tuesday</div>
+    <div *ngSwitchCase="4">Today is Wednesday</div>
+    <div *ngSwitchCase="5">Today is Thursday</div>
+    <div *ngSwitchCase="6">Today is Friday</div>
+    <div *ngSwitchCase="7">Today is Saturday</div>
+    <div *ngSwitchDefault>Enter Number between 1-7</div>
+</div>
+
+
+
+
 <router-outlet></router-outlet>

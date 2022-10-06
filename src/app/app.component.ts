@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
-  success_msg=true;
+  title = 'Career-Infotech';//title of the html page
 
-  contact=[
+  success_msg=true;// If variable
+
+  day=7;//Switch case variable
+
+  contact=[//array object used in for loop
     {
       "firstname":"Rahul",
       "lastname":"Sonune",
