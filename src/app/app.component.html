@@ -1,6 +1,39 @@
 
 <h1 [ngStyle]="{'background-color' : 'aqua' }">{{title}}</h1>
 
+<div [ngClass]="'class'">This is ngClass</div>
+<!-- <div>{{contact.firstname}}</div> -->
+<div [ngStyle]="{'background-color':'purple', 'color':'white'}">This is Built-In Pipes</div>
+<div>{{capital | uppercase}}</div>
+<div>{{small | lowercase}}</div>
+<div>{{percentage | percent}}</div>
+<div>{{currencyEx | currency:'YUAN'}}</div>
+<div>{{DateEx | date:'dd-MMMM-YYYY'}}</div>
+<div>{{JSONex | json}}</div>
+
+<h3 [ngStyle]="{'background-color':'green', 'color':'white'}">This is Chaining Pipes</h3>
+<div>{{DateEx | date | uppercase }}</div> 
+<div>{{currencyEx | currency:'CAD' | lowercase }}</div> 
+
+<h3 [ngStyle]="{'background-color':'green', 'color':'white'}">This is Table using Interpolation</h3>
+<table>
+    <tr>
+        <th>id</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>contacts</th>
+    </tr>
+    <tr *ngFor="let con of contact;">
+        <td>{{con.id}}</td>
+        <td>{{con.firstname}}</td>
+        <td>{{con.lastname}}</td>
+        <td>{{con.contact}}</td> 
+    </tr>
+</table>
+<input [(ngModel)]="modVar" />
+<div *ngIf="number > 1">{{ modVar }}</div>
+
+<br>
 <h3 [ngStyle]="{'background-color': variable, 'color': variable2}">This is ngStyle Using Variable</h3>
 <h3 [ngStyle]="{'background-color': 'lime', 'color': variable3 === 'blue' ? 'blue' : 'gray'}">This is ngStyle using Ternary Opeator/Condition</h3>
 <h3>Working with ngIf</h3> 
