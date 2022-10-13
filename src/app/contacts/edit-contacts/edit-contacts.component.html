@@ -1,1 +1,16 @@
 <p>edit-contacts works!</p>
+
+<table> 
+    <th>Contact-Id</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+
+    <tr *ngFor="let list of contactList">
+        <td>{{list.contactId}}</td>
+        <td>{{list.firstname}}</td>
+        <td>{{list.lastname}}</td>
+        <td><a [routerLink]="['/edit']">Edit</a> | <a href="#">Delete</a></td>
+    </tr>
+</table>
+
+
