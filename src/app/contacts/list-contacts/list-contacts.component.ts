@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-contacts',
@@ -6,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-contacts.component.css']
 })
 export class ListContactsComponent implements OnInit {
-
-  constructor() { }
+  fname="";
+  lname="";
+  contact=0;
+  constructor(private activatedRoute : ActivatedRoute) { 
+    this.activatedRoute.queryParams.subscribe(params=>{
+      this.fname=params['fname'];
+      this.lname=params['lname'];
+      this.contact=params['contact'];
+    })
+  }
 
   ngOnInit(): void {
   }

@@ -6,6 +6,7 @@ import { ViewContactsComponent } from './view-contacts/view-contacts.component';
 import { ListContactsComponent } from './list-contacts/list-contacts.component';
 import { DeleteContactsComponent } from './delete-contacts/delete-contacts.component';
 import { EditContactsComponent } from './edit-contacts/edit-contacts.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -19,7 +20,8 @@ import { EditContactsComponent } from './edit-contacts/edit-contacts.component';
     EditContactsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ]
 })
 export class ContactsModule { }
